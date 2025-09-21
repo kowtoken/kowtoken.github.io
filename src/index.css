@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #0a1a2f, #000000, #0a1a2f);
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Όλα τα sections έχουν ίδιο spacing */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  scroll-margin-top: 6rem; /* για smooth scroll από το Header */
+}
+
+section {
+  scroll-margin-top: 80px; /* ίδιο με το offset */
+}
