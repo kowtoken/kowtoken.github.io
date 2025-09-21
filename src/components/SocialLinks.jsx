@@ -17,12 +17,7 @@ const socials = [
     url: "https://discord.com/invite/XkVMDT59Yz",
     color: "text-indigo-400 hover:text-indigo-300",
   },
-  {
-    name: "GitHub",
-    icon: "fab fa-github",
-    url: "https://github.com/KingOfWorldToken",
-    color: "text-gray-300 hover:text-white",
-  },
+
   {
     name: "Medium",
     icon: "fab fa-medium",

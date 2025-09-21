@@ -31,7 +31,7 @@ const Whitepaper = () => {
 
         {/* Button */}
         <a
-          href="https://linkly.link/2EWqo" // ✨ Βάλε το δικό σου link
+          href="https://www.dropbox.com/scl/fi/3ol64y0qhp3tcnogqar8l/KingOfWorld_Whitepaper.pdf?rlkey=0sgi1s8xgkearesvtclm509pd&e=1&st=7cg3fnth&dl=0" // ✨ Βάλε το δικό σου link
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-yellow-200 text-black font-bold py-4 px-8 rounded-full shadow-lg hover:scale-105 transition-transform duration-300"

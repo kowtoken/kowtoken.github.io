@@ -43,15 +43,7 @@ const Footer = () => {
           >
             <i className="fab fa-medium text-black" />
           </a>
-          <a
-            href="https://github.com/KingOfWorldToken"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="w-10 h-10 flex items-center justify-center rounded-full border border-gold/30 bg-black hover:scale-125 hover:border-gold/60 transition-all duration-300"
-          >
-            <i className="fab fa-github text-white" />
-          </a>
+          
           <a
             href="https://www.reddit.com/user/Token_KingOfWorld/"
             target="_blank"
