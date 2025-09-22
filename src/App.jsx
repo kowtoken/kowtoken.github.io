@@ -24,10 +24,10 @@ export default function App() {
         <Tokenomics />     {/* Tokenomics */}
         <Roadmap />        {/* Roadmap */}
         <Whitepaper />     {/* Whitepaper */}
-        <BuyToken />       {/* Προαιρετικά στο τέλος */}
         <SocialLinks />    {/* Social Media */}
         <Faq />            {/* FAQ */}
         <Contact />        {/* Contact Us */}
+        <BuyToken />       {/* Προαιρετικά στο τέλος */}
         
       </main>
       <Footer />

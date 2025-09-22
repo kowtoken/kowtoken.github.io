@@ -44,14 +44,16 @@ const Footer = () => {
             <i className="fab fa-medium text-black" />
           </a>
           
+          
+
           <a
-            href="https://www.reddit.com/user/Token_KingOfWorld/"
+            href="https://mastodon.social/@KingOfWorldToken"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Reddit"
+            aria-label="Mastodon"
             className="w-10 h-10 flex items-center justify-center rounded-full border border-gold/30 bg-white/10 hover:scale-125 hover:border-gold/60 transition-all duration-300"
           >
-            <i className="fab fa-reddit text-orange-500" />
+            <i className="fab fa-mastodon text-blue-500" />
           </a>
         </div>
 

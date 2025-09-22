@@ -18,14 +18,10 @@ const Header = () => {
   return (
     <header className="bg-darkblue text-white sticky top-0 z-50 border-b border-gold/30">
       <div className="w-full flex items-center justify-between px-6 py-4 relative">
-
-        {/* 👑 Logo τελείως αριστερά */}
+        
+        {/* 👑 Logo αριστερά */}
         <div className="flex items-center space-x-2">
-          <img
-            src={logo}
-            alt="KOW Logo"
-            className="h-12 w-12"
-          />
+          <img src={logo} alt="KOW Logo" className="h-12 w-12" />
           <span className="text-2xl font-extrabold tracking-wide text-gold">
             KOW
           </span>
@@ -39,12 +35,10 @@ const Header = () => {
               to={link.to}
               smooth={true}
               duration={500}
-              spy={true}
+              hashSpy={false}   // 🚫 Δεν θα αλλάζει το URL
               offset={-80}
-              className="relative cursor-pointer text-base font-semibold text-gold transition duration-300 
-                         hover:text-white"
-              activeClass="text-white font-bold after:content-[''] after:absolute after:-bottom-1 after:left-0 
-                           after:w-full after:h-[2px] after:bg-gold after:rounded-full"
+              className="relative cursor-pointer text-base font-semibold text-gold transition duration-300 hover:text-white"
+              activeClass="text-white font-bold after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-gold after:rounded-full"
             >
               {link.label}
             </Link>
@@ -53,12 +47,16 @@ const Header = () => {
 
         {/* 🚀 CTA Button δεξιά */}
         <div>
-          <a
-            href="#buytoken"
-            className="bg-gradient-to-r from-gold to-white text-darkblue px-5 py-2 rounded-full font-bold hover:scale-105 transition-transform duration-300"
+          <Link
+            to="buytoken"
+            smooth={true}
+            duration={500}
+            hashSpy={false}   // 🚫 Δεν θα αλλάζει το URL
+            offset={-80}
+            className="cursor-pointer bg-gradient-to-r from-gold to-white text-darkblue px-5 py-2 rounded-full font-bold hover:scale-105 transition-transform duration-300"
           >
             🚀 Buy KOW
-          </a>
+          </Link>
         </div>
       </div>
     </header>

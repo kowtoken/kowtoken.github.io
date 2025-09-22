@@ -20,3 +20,7 @@ section {
 section {
   scroll-margin-top: 80px; /* ίδιο με το offset */
 }
+
+html {
+  scroll-behavior: smooth;
+}

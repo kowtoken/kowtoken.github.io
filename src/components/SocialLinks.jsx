@@ -25,11 +25,12 @@ const socials = [
     color:
       "text-black hover:text-gray-800 bg-white px-3 py-1 rounded-full", // 👈 Medium style
   },
+  
   {
-    name: "Reddit",
-    icon: "fab fa-reddit",
-    url: "https://www.reddit.com/user/Token_KingOfWorld/",
-    color: "text-orange-500 hover:text-orange-400",
+    name: "Mastodon",
+    icon: "fab fa-mastodon",
+    url: "https://mastodon.social/@KingOfWorldToken",
+    color: "text-[#6364FF] hover:text-[#4e4fff]", // Mastodon purple
   },
 ];
 
@@ -49,7 +50,7 @@ const SocialLinks = () => {
       <img
         src={socialImage}
         alt="Social Media decoration left"
-        className="absolute left-0 top-1/2 -translate-y-1/2 w-[650px] max-w-[40%] opacity-90 pointer-events-none"
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-[630px] max-w-[40%] opacity-90 pointer-events-none"
       />
 
       {/* 🚀 Εικόνα δεξιά */}

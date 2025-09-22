@@ -20,7 +20,7 @@ const Hero = () => {
         {/* 👑 Title */}
         <h1 className="text-5xl sm:text-6xl font-extrabold mb-6 leading-tight">
           <span className="text-gold">👑 King of World Token</span>{" "}
-          <span className="text-white">(KOW)</span>
+          <span className="text-gold">(KOW)</span>
         </h1>
 
         {/* 💬 Subtitle */}

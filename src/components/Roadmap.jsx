@@ -95,7 +95,7 @@ const Roadmap = () => {
                 }`}
               >
                 <h3
-                  className={`text-xl font-bold mb-4 ${
+                  className={`text-xl font-bold mb-3 ${
                     item.completed ? "text-green-400" : "text-gold"
                   }`}
                 >
