@@ -2,8 +2,8 @@ const roadmapItems = [
   {
     title: "🌐🗺️ 2025",
     description: [
-      "Token creation",
-      "Launch of community channels (Telegram, Twitter — TikTok & Discord in the future)",
+      <span className="text-gold font-semibold">Token creation</span>,
+      "Launch of community channels ",
       "Strengthening branding and global community growth."
     ],
     completed: true,
@@ -14,7 +14,7 @@ const roadmapItems = [
       "Create PancakeSwap liquidity pool",
       "Initial DEX listing",
       "Achievement of the target of 2,918 holders",
-      "3% of all tokens will be burned and fees will be reduced to 8%.",
+      <span className="text-gold font-semibold">3% of all tokens will be burned and fees will be reduced to 8%.</span>,
       "The 3% reflection fee (a tax intended for future burning🔥) will return to 0%."
     ],
     completed: true,
@@ -23,7 +23,7 @@ const roadmapItems = [
     title: "🌐🗺️ 2026",
     description: [
       "Achievement of the target of 2,918 holders",
-      "3% of all tokens will be burned and fees will be reduced to 8%.",
+      <span className="text-gold font-semibold">3% of all tokens will be burned and fees will be reduced to 8%.</span>,
       "The 3% reflection fee (a tax intended for future burning🔥) will return to 0%.",
       "Expansion of the KOW ecosystem with new utilities.",
     ],

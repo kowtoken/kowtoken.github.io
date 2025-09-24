@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png";
+import binanceLogo from "../assets/pics/Binance_Logo.svg"; // 👈 βάζεις εδώ το SVG που έχεις
 
 const Footer = () => {
   return (
@@ -16,6 +17,7 @@ const Footer = () => {
           >
             <i className="fa-brands fa-x-twitter text-sky-400" />
           </a>
+
           <a
             href="https://t.me/kingofworldtoken"
             target="_blank"
@@ -25,6 +27,7 @@ const Footer = () => {
           >
             <i className="fab fa-telegram text-sky-400" />
           </a>
+
           <a
             href="https://discord.com/invite/XkVMDT59Yz"
             target="_blank"
@@ -34,6 +37,7 @@ const Footer = () => {
           >
             <i className="fab fa-discord text-indigo-400" />
           </a>
+
           <a
             href="https://medium.com/@tokenkingofworld"
             target="_blank"
@@ -43,8 +47,6 @@ const Footer = () => {
           >
             <i className="fab fa-medium text-black" />
           </a>
-          
-          
 
           <a
             href="https://mastodon.social/@KingOfWorldToken"
@@ -54,6 +56,17 @@ const Footer = () => {
             className="w-10 h-10 flex items-center justify-center rounded-full border border-gold/30 bg-white/10 hover:scale-125 hover:border-gold/60 transition-all duration-300"
           >
             <i className="fab fa-mastodon text-blue-500" />
+          </a>
+
+          {/* ✅ Binance με SVG */}
+          <a
+            href="https://app.binance.com/uni-qr/cpro/Paraklitos?l=el&r=Paraklitos&uc=web_square_share_link&us=copylink"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Binance"
+            className="w-10 h-10 flex items-center justify-center rounded-full border border-gold/30 bg-white/10 hover:scale-125 hover:border-gold/60 transition-all duration-300"
+          >
+            <img src={binanceLogo} alt="Binance" className="h-5 w-5" />
           </a>
         </div>
 

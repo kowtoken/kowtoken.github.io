@@ -1,3 +1,6 @@
+// ✅ Προσθέτεις αυτό το import (βάλε το σωστό path στο δικό σου project)
+import binanceLogo from "../assets/pics/Binance_Logo.svg";
+
 const socials = [
   {
     name: "X",
@@ -17,25 +20,31 @@ const socials = [
     url: "https://discord.com/invite/XkVMDT59Yz",
     color: "text-indigo-400 hover:text-indigo-300",
   },
-
   {
     name: "Medium",
     icon: "fab fa-medium",
     url: "https://medium.com/@tokenkingofworld",
     color:
-      "text-black hover:text-gray-800 bg-white px-3 py-1 rounded-full", // 👈 Medium style
+      "text-black hover:text-gray-800 bg-white px-3 py-1 rounded-full",
   },
-  
   {
     name: "Mastodon",
     icon: "fab fa-mastodon",
     url: "https://mastodon.social/@KingOfWorldToken",
-    color: "text-[#6364FF] hover:text-[#4e4fff]", // Mastodon purple
+    color: "text-[#6364FF] hover:text-[#4e4fff]",
+  },
+
+  // ✅ ΜΟΝΟ αυτό αλλάζει: χρησιμοποιούμε το δικό σου SVG αρχείο
+  {
+    name: "Binance",
+    icon: <img src={binanceLogo} alt="Binance" className="h-5 w-5" />, // ή h-5 w-auto αν θες exact aspect
+    url: "https://app.binance.com/uni-qr/cpro/Paraklitos?l=el&r=Paraklitos&uc=web_square_share_link&us=copylink",
+    color: "text-[#F3BA2F] hover:text-[#d4a51f]",
   },
 ];
 
-import socialImage from "../assets/pics/KOWCommunity.jpg";   // 👈 αριστερή εικόνα
-import rightImage from "../assets/pics/kowcumm.jpg"; // 👈 νέα εικόνα δεξιά
+import socialImage from "../assets/pics/KOWCommunity.jpg";
+import rightImage from "../assets/pics/kowcumm.jpg";
 
 const SocialLinks = () => {
   return (
@@ -46,14 +55,14 @@ const SocialLinks = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/70 via-black/40 to-darkblue/70" />
 
-      {/* 🚀 Εικόνα αριστερά */}
+      {/* Εικόνα αριστερά */}
       <img
         src={socialImage}
         alt="Social Media decoration left"
         className="absolute left-0 top-1/2 -translate-y-1/2 w-[630px] max-w-[40%] opacity-90 pointer-events-none"
       />
 
-      {/* 🚀 Εικόνα δεξιά */}
+      {/* Εικόνα δεξιά */}
       <img
         src={rightImage}
         alt="Social Media decoration right"
@@ -75,7 +84,13 @@ const SocialLinks = () => {
               rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-md border border-gold/30 rounded-full px-6 py-3 flex items-center gap-3 transition-all duration-300 hover:scale-110"
             >
-              <i className={`${social.icon} text-xl ${social.color}`} />
+              {/* Αν είναι string => FontAwesome <i>, αλλιώς ρίχνουμε το JSX (το SVG της Binance) */}
+              {typeof social.icon === "string" ? (
+                <i className={`${social.icon} text-xl ${social.color}`} />
+              ) : (
+                social.icon
+              )}
+
               <span className={`text-sm font-semibold ${social.color}`}>
                 {social.name}
               </span>

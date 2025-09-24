@@ -11,6 +11,7 @@ import poocoinLogo from "../assets/partners/poocoin.png";
 import coinbrainLogo from "../assets/partners/coinbrain.png";
 import floozLogo from "../assets/partners/flooz.png";
 import dextoolsLogo from "../assets/partners/dextools.png";
+import dexviewLogo from "../assets/partners/dexview.png";
 
 const BuyToken = () => {
   const [amount, setAmount] = useState("");
@@ -49,6 +50,12 @@ const BuyToken = () => {
       logo: dextoolsLogo,
       color: "from-gray-700 to-gray-900 text-white",
     },
+    {
+      name: "Dexview",
+      url: "https://www.dexview.com/bsc/0xAbCbc9f66C5955A4A71DEc40c9dA2C61d28Ca3b6",
+      logo: dexviewLogo,
+      color: "from-blue-700 to-gray-900 text-white",
+    },
   ];
 
   return (
@@ -62,22 +69,20 @@ const BuyToken = () => {
       <div className="relative max-w-6xl mx-auto px-6 text-center space-y-10">
         {/* Title */}
         <div className="flex flex-col items-center space-y-4">
-          <img
-            src={kowLogo}
-            alt="KOW Logo"
-            className="h-40"
-          />
+          <img src={kowLogo} alt="KOW Logo" className="h-40" />
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gold">
             💳 Buy KOW
           </h2>
           <p className="text-gray-300 text-lg">
             Choose your favorite platform to{" "}
-            <span className="text-gold font-semibold">buy King Of World Token</span>
+            <span className="text-gold font-semibold">
+              buy King Of World Token
+            </span>
           </p>
         </div>
 
         {/* 🛒 Buy Links */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-6">
           {buyLinks.map((link, idx) => (
             <a
               key={idx}
@@ -90,6 +95,15 @@ const BuyToken = () => {
               <span className="font-bold">{link.name}</span>
             </a>
           ))}
+        </div>
+
+        {/* 📌 Fees Info */}
+        <div className="mt-10 bg-white/10 backdrop-blur-md border border-gold/30 rounded-xl p-6 max-w-xl mx-auto">
+          <h3 className="text-2xl font-bold text-gold mb-3">ℹ️ Trading Fees</h3>
+          <p className="text-gray-300 text-lg">
+            <span className="text-gold font-semibold">Buy Tax:</span> 11% <br />
+            <span className="text-gold font-semibold">Sell Tax:</span> 9%
+          </p>
         </div>
       </div>
     </section>
