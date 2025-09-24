@@ -12,6 +12,7 @@ import coinbrainLogo from "../assets/partners/coinbrain.png";
 import floozLogo from "../assets/partners/flooz.png";
 import dextoolsLogo from "../assets/partners/dextools.png";
 import dexviewLogo from "../assets/partners/dexview.png";
+import binanceLogo from "../assets/partners/binance.png";
 
 const BuyToken = () => {
   const [amount, setAmount] = useState("");
@@ -56,6 +57,12 @@ const BuyToken = () => {
       logo: dexviewLogo,
       color: "from-blue-700 to-gray-900 text-white",
     },
+    {
+      name: "Binance",
+      url: "https://web3.binance.com/en/token/bsc/0xabcbc9f66c5955a4a71dec40c9da2c61d28ca3b6",
+      logo: binanceLogo,
+      color: "from-blue-700 to-gray-900 text-white",
+    },
   ];
 
   return (
@@ -82,7 +89,7 @@ const BuyToken = () => {
         </div>
 
         {/* 🛒 Buy Links */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-7 gap-6">
           {buyLinks.map((link, idx) => (
             <a
               key={idx}

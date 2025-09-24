@@ -8,6 +8,7 @@ import coindiscoveryLogo from "../assets/partners/coindiscovery.png";
 import coinbrainLogo from "../assets/partners/coinbrain.png";
 import floozLogo from "../assets/partners/flooz.png";
 import dexviewLogo from "../assets/partners/dexview.png";
+import binanceLogo from "../assets/partners/binance.png";
 
 const partners = [
   { name: "Bscscan", logo: bscscanLogo, link: "https://bscscan.com/token/0xabcbc9f66c5955a4a71dec40c9da2c61d28ca3b6" },
@@ -20,6 +21,7 @@ const partners = [
   { name: "Coinbrain", logo: coinbrainLogo, link: "https://coinbrain.com/coins/bnb-0xAbCbc9f66C5955A4A71DEc40c9dA2C61d28Ca3b6" },
   { name: "Flooz", logo: floozLogo, link: "https://flooz.xyz/trade/0xAbCbc9f66C5955A4A71DEc40c9dA2C61d28Ca3b6" },
   { name: "Dexview", logo: dexviewLogo, link: "https://www.dexview.com/bsc/0xAbCbc9f66C5955A4A71DEc40c9dA2C61d28Ca3b6" },
+  { name: "Binance", logo: binanceLogo, link: "https://web3.binance.com/en/token/bsc/0xabcbc9f66c5955a4a71dec40c9da2c61d28ca3b6" },
 ];
 
 const Partners = () => {
