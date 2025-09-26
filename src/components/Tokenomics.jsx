@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import avaxLogo from "../assets/pics/logo-kouros-sun.png";
 
 const Tokenomics = () => {
@@ -23,50 +23,59 @@ const Tokenomics = () => {
   return (
     <section
       id="tokenomics"
-      className="min-h-screen flex flex-col justify-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white relative overflow-hidden"
+      aria-labelledby="tokenomics-title"
+      className="relative min-h-screen flex flex-col justify-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white overflow-hidden"
     >
-      {/* Background overlay */}
+      {}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/70 via-black/40 to-darkblue/70" />
 
       <div className="relative max-w-7xl mx-auto px-6 w-full">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-gold">
+        <h2
+          id="tokenomics-title"
+          className="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-gold"
+        >
           📊 Tokenomics
         </h2>
 
-        {/* Grid με στοιχεία + εικόνα */}
+        {}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Token Info */}
+          {}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {data.map((item, index) => (
-              <div
+              <article
                 key={index}
+                role="group"
+                aria-label={item.title}
                 className="bg-white/10 backdrop-blur-lg border border-gold/30 rounded-2xl p-6 text-center hover:scale-105 hover:border-gold/60 transition-all duration-500"
               >
                 <h3 className="text-lg font-semibold text-gold mb-2">
                   {item.title}
                 </h3>
                 <p className="text-xl font-bold text-white">{item.value}</p>
-              </div>
+              </article>
             ))}
           </div>
 
-          {/* Right: Static Image */}
+          {}
           <div className="w-full flex justify-center">
             <img
               src={avaxLogo}
-              alt="KOW Logo"
+              alt="KOW decorative logo"
               className="w-full max-w-2xl object-contain drop-shadow-2xl rounded-2xl"
+              loading="lazy"
             />
           </div>
         </div>
 
-        {/* Contract Address κάτω */}
+        {}
         <div className="mt-16 text-center">
           <h3 className="text-lg font-semibold text-gold mb-3">
             📜 Contract Address
           </h3>
           <p
             onClick={handleCopy}
+            title="Click to copy"
+            aria-live="polite"
             className={`text-xl font-bold cursor-pointer px-6 py-4 inline-block rounded-xl border transition-all duration-300 break-all ${
               copied
                 ? "bg-gold/20 border-gold/50 text-gold"
@@ -76,13 +85,14 @@ const Tokenomics = () => {
             {copied ? "✅ Copied to clipboard!" : contractAddress}
           </p>
 
-          {/* 🔗 Link στο BscScan */}
+          {}
           <div className="mt-4">
             <a
               href={`https://bscscan.com/token/${contractAddress}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-gold hover:text-yellow-300 font-semibold underline"
+              aria-label="View contract on BscScan"
             >
               🔎 View on BscScan
             </a>

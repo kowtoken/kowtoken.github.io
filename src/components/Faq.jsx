@@ -35,11 +35,11 @@ const Faq = () => {
       id="faq"
       className="min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white relative overflow-hidden"
     >
-      {/* Background */}
+      {}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/70 via-black/40 to-darkblue/70" />
 
       <div className="relative max-w-4xl mx-auto px-6 w-full">
-        {/* 🏷️ Title */}
+        {}
         <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-12 text-gold">
           ❓ Frequently Asked Questions
         </h2>

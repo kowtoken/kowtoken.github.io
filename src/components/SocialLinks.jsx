@@ -1,4 +1,3 @@
-// ✅ Προσθέτεις αυτό το import (βάλε το σωστό path στο δικό σου project)
 import binanceLogo from "../assets/pics/Binance_Logo.svg";
 
 const socials = [
@@ -34,10 +33,9 @@ const socials = [
     color: "text-[#6364FF] hover:text-[#4e4fff]",
   },
 
-  // ✅ ΜΟΝΟ αυτό αλλάζει: χρησιμοποιούμε το δικό σου SVG αρχείο
   {
     name: "Binance",
-    icon: <img src={binanceLogo} alt="Binance" className="h-5 w-5" />, // ή h-5 w-auto αν θες exact aspect
+    icon: <img src={binanceLogo} alt="Binance" className="h-5 w-5" />, 
     url: "https://app.binance.com/uni-qr/cpro/Paraklitos?l=el&r=Paraklitos&uc=web_square_share_link&us=copylink",
     color: "text-[#F3BA2F] hover:text-[#d4a51f]",
   },
@@ -52,24 +50,24 @@ const SocialLinks = () => {
       id="social-media"
       className="min-h-screen flex items-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white text-center relative overflow-hidden"
     >
-      {/* Background */}
+      {}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/70 via-black/40 to-darkblue/70" />
 
-      {/* Εικόνα αριστερά */}
+      {}
       <img
         src={socialImage}
         alt="Social Media decoration left"
         className="absolute left-0 top-1/2 -translate-y-1/2 w-[630px] max-w-[40%] opacity-90 pointer-events-none"
       />
 
-      {/* Εικόνα δεξιά */}
+      {}
       <img
         src={rightImage}
         alt="Social Media decoration right"
         className="absolute right-2 top-1/2 -translate-y-1/2 w-[550px] max-w-[40%] opacity-90 pointer-events-none"
       />
 
-      {/* Περιεχόμενο */}
+      {}
       <div className="relative max-w-3xl mx-auto px-6 z-10">
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 text-gold">
           🌐 Social Media
@@ -84,7 +82,7 @@ const SocialLinks = () => {
               rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-md border border-gold/30 rounded-full px-6 py-3 flex items-center gap-3 transition-all duration-300 hover:scale-110"
             >
-              {/* Αν είναι string => FontAwesome <i>, αλλιώς ρίχνουμε το JSX (το SVG της Binance) */}
+              {}
               {typeof social.icon === "string" ? (
                 <i className={`${social.icon} text-xl ${social.color}`} />
               ) : (

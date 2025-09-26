@@ -10,25 +10,35 @@ const Whitepaper = () => {
   return (
     <section
       id="whitepaper"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0b0f1a] via-black to-[#0b0f1a] text-white relative pt-24" // ✨ extra top padding
+      aria-labelledby="whitepaper-title"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0b0f1a] via-black to-[#0b0f1a] text-white relative pt-24"
     >
+      {}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/60 via-black/40 to-darkblue/60" />
+
+      {}
       <div className="relative z-10 w-full px-6 text-center">
-        <h2 className="flex items-center justify-center gap-3 text-4xl sm:text-5xl font-extrabold mb-6 text-gold">
+        {}
+        <h2
+          id="whitepaper-title"
+          className="flex items-center justify-center gap-3 text-4xl sm:text-5xl font-extrabold mb-6 text-gold"
+        >
           <span role="img" aria-label="document">📄</span>
           Whitepaper
         </h2>
 
-        <p className="text-lg sm:text-xl mb-8 text-gray-300 leading-relaxed">
+        {}
+        <p className="text-lg sm:text-xl mb-8 text-gray-300 leading-relaxed max-w-2xl mx-auto">
           Dive into our{" "}
           <span className="text-gold font-semibold">vision</span>,{" "}
           <span className="text-gold font-semibold">technology</span>, and{" "}
           <span className="text-gold font-semibold">tokenomics</span> of KOW.
         </p>
 
-        {/* Κουμπί → νέα σελίδα */}
+        {}
         <Link
           to="/whitepaper"
+          aria-label="View or download the Whitepaper"
           className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-yellow-200 text-black font-bold py-4 px-8 rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
         >
           <FaDownload className="text-lg" />
@@ -37,11 +47,36 @@ const Whitepaper = () => {
 
         {/* Logos */}
         <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-0 w-full">
-          <img src={bscscanLogo} alt="BscScan" className="w-full h-full object-cover" />
-          <img src={ethLogo} alt="Coinbrain" className="w-full h-full object-cover" />
-          <img src={solanaLogo} alt="Flooz" className="w-full h-full object-cover" />
-          <img src={polygonLogo} alt="Poocoin" className="w-full h-full object-cover" />
-          <img src={avaxLogo} alt="Gemfinder" className="w-full h-full object-cover" />
+          <img
+            src={bscscanLogo}
+            alt="BscScan logo"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <img
+            src={ethLogo}
+            alt="Ethereum logo"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <img
+            src={solanaLogo}
+            alt="Solana logo"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <img
+            src={polygonLogo}
+            alt="Polygon logo"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <img
+            src={avaxLogo}
+            alt="Avalanche logo"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

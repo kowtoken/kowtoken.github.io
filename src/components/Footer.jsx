@@ -1,18 +1,24 @@
 import logo from "../assets/logo.png";
-import binanceLogo from "../assets/pics/Binance_Logo.svg"; // 👈 βάζεις εδώ το SVG που έχεις
+import binanceLogo from "../assets/pics/Binance_Logo.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-darkblue via-black to-darkblue text-white py-8 px-4 border-t border-gold/30 relative">
+    <footer
+      aria-labelledby="footer-title"
+      className="bg-gradient-to-b from-darkblue via-black to-darkblue text-white py-8 px-4 border-t border-gold/30 relative"
+    >
+      <h2 id="footer-title" className="sr-only">
+        Website footer with social links
+      </h2>
+
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-        
-        {/* 👑 Social Icons */}
+        {}
         <div className="flex gap-4 items-center text-xl">
           <a
             href="https://x.com/Kingofworl32190"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="X"
+            aria-label="X (Twitter)"
             className="w-10 h-10 flex items-center justify-center rounded-full border border-gold/30 bg-white/10 hover:scale-125 hover:border-gold/60 transition-all duration-300"
           >
             <i className="fa-brands fa-x-twitter text-sky-400" />
@@ -58,7 +64,6 @@ const Footer = () => {
             <i className="fab fa-mastodon text-blue-500" />
           </a>
 
-          {/* ✅ Binance με SVG */}
           <a
             href="https://app.binance.com/uni-qr/cpro/Paraklitos?l=el&r=Paraklitos&uc=web_square_share_link&us=copylink"
             target="_blank"
@@ -66,19 +71,25 @@ const Footer = () => {
             aria-label="Binance"
             className="w-10 h-10 flex items-center justify-center rounded-full border border-gold/30 bg-white/10 hover:scale-125 hover:border-gold/60 transition-all duration-300"
           >
-            <img src={binanceLogo} alt="Binance" className="h-5 w-5" />
+            <img
+              src={binanceLogo}
+              alt="Binance logo"
+              className="h-5 w-5"
+              loading="lazy"
+            />
           </a>
         </div>
 
-        {/* 🖼️ Logo */}
+        {}
         <img
           src={logo}
-          alt="KOW Logo"
+          alt="King of World Logo"
           className="h-16 sm:h-12 object-contain"
+          loading="lazy"
         />
       </div>
 
-      {/* 📜 Τελικό Κείμενο */}
+      {}
       <div className="mt-6 text-center text-sm text-gray-400">
         &copy; {new Date().getFullYear()}{" "}
         <span className="text-gold font-semibold">King of World Token</span>. All

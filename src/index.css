@@ -2,25 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #0a1a2f, #000000, #0a1a2f);
-  color: white;
-  font-family: sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Όλα τα sections έχουν ίδιο spacing */
+body {
+  @apply font-sans text-white bg-gradient-to-b from-[#0a1a2f] via-black to-[#0a1a2f];
+  margin: 0;
+  padding: 0;
+}
+
 section {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  scroll-margin-top: 6rem; /* για smooth scroll από το Header */
+  scroll-margin-top: 80px; 
 }
 
-section {
-  scroll-margin-top: 80px; /* ίδιο με το offset */
-}
-
-html {
-  scroll-behavior: smooth;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #DAA520; 
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }

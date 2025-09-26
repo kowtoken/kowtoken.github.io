@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { scroller } from "react-scroll";
-import { AnimatePresence, motion } from "framer-motion"; // 👈 import
+import { AnimatePresence, motion } from "framer-motion";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -25,16 +25,18 @@ function Home() {
   useEffect(() => {
     if (location.hash) {
       const target = location.hash.replace("#", "");
-      scroller.scrollTo(target, {
-        duration: 500,
-        smooth: true,
-        offset: -80,
-      });
+      setTimeout(() => {
+        scroller.scrollTo(target, {
+          duration: 500,
+          smooth: true,
+          offset: -80,
+        });
+      }, 100);
     }
   }, [location]);
 
   return (
-    <main>
+    <main id="main-content" className="bg-black text-white">
       <Hero />
       <About />
       <Info />
@@ -54,10 +56,9 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* 👇 Animation wrapper */}
       <AnimatePresence mode="wait">
         <motion.div
           key={location.pathname}
@@ -65,6 +66,7 @@ export default function App() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
+          className="flex-grow"
         >
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />

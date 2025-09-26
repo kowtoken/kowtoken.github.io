@@ -1,6 +1,6 @@
 import { useForm } from "@formspree/react";
 import { FaPaperPlane } from "react-icons/fa";
-import successImg from "../assets/success.png"; // 👉 η εικόνα σου
+import successImg from "../assets/success.png"; 
 
 const ContactUs = () => {
   const [state, handleSubmit] = useForm("mqayazkj");
@@ -10,7 +10,7 @@ const ContactUs = () => {
       id="contact-us"
       className="min-h-screen flex items-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white text-center relative overflow-hidden"
     >
-      {/* Background */}
+      {}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/70 via-black/40 to-darkblue/70" />
 
       <div className="relative max-w-3xl mx-auto px-6 w-full">
@@ -18,7 +18,7 @@ const ContactUs = () => {
           📬 Contact Us
         </h2>
 
-        {/* ✅ Success Card */}
+        {}
         {state.succeeded ? (
           <div className="w-full bg-green-900/20 border border-green-500 rounded-3xl p-10 flex flex-col items-center justify-center text-center shadow-xl animate-fadeIn">
             <img

@@ -3,13 +3,12 @@ import { FaArrowLeft, FaArrowRight, FaDownload } from "react-icons/fa";
 import logoBg from "../assets/LOGO.png";
 import pdfFile from "../assets/KingOfWorld_Whitepaper.pdf";
 
-// 👇 Εικόνες
 import liquidityImg from "../assets/liquidity01.png";
 import blockchainImg from "../assets/blockchain-tech.png";
 import communityImg from "../assets/team.png";
 import governanceImg from "../assets/governance.png";
 
-// --- Keyword highlighter
+
 const HIGHLIGHT_TERMS = [
   "KOW",
   "King of World",
@@ -39,7 +38,6 @@ function applyHighlight(text) {
   return html;
 }
 
-// Sections
 const sections = [
   {
     id: "about",
@@ -154,7 +152,6 @@ By allowing liquidity to grow alongside adoption, the project strengthens stabil
           "🔥 3% of all tokens will be burned",
           "Reflection fee (3%) returns to 0%",
           "Fees reduced to 8%",
-
         ],
       },
       {
@@ -166,7 +163,6 @@ By allowing liquidity to grow alongside adoption, the project strengthens stabil
           "Fees reduced to 8%",
           "Expansion of the KOW ecosystem with new utilities",
           "At 5,000 holders → Fees reduced from 8% → 6%",
-
         ],
       },
       {
@@ -244,18 +240,25 @@ export default function WhitepaperPage() {
   return (
     <div className="min-h-screen bg-[#0b0f1a] text-white">
       <div className="flex">
-        {/* Sidebar */}
-        <aside className="w-64 bg-black/90 border-r border-gold/30 p-6 sticky top-0 h-screen overflow-y-auto">
+        {}
+        <aside
+          className="w-64 bg-black/90 border-r border-gold/30 p-6 sticky top-0 h-screen overflow-y-auto"
+          role="navigation"
+          aria-label="Whitepaper chapters"
+        >
           <h2 className="text-2xl font-bold text-gold mb-6">Chapters</h2>
           <ul className="space-y-3">
             {sections.map((s) => (
               <li key={s.id}>
                 <button
+                  type="button"
                   onClick={() => setActive(s.id)}
-                  className={`block w-full text-left px-3 py-2 rounded-l border-l-4 ${active === s.id
+                  aria-current={active === s.id ? "true" : undefined}
+                  className={`block w-full text-left px-3 py-2 rounded-l border-l-4 ${
+                    active === s.id
                       ? "bg-gold text-black font-bold border-yellow-400"
                       : "hover:bg-gold/20 border-transparent"
-                    }`}
+                  }`}
                 >
                   {s.title}
                 </button>
@@ -264,33 +267,35 @@ export default function WhitepaperPage() {
           </ul>
         </aside>
 
-        {/* Content */}
-        <main className="flex-1 relative">
-          {/* 👑 Logo background */}
+        {}
+        <main className="flex-1 relative" aria-live="polite">
+          {}
           <img
             src={logoBg}
-            alt="KOW Logo Background"
+            alt=""
+            aria-hidden="true"
             className="absolute inset-0 w-[500px] h-[500px] opacity-20 m-auto pointer-events-none select-none"
           />
 
-          {/* Header */}
+          {}
           <div className="relative p-6 border-b border-gold/20 z-10 flex justify-between items-center bg-black/50">
             <h1 className="text-xl font-bold text-gold">📑 KOW Whitepaper</h1>
             <a
               href={pdfFile}
               download="KOW_Whitepaper.pdf"
               className="flex items-center gap-2 bg-gold text-black font-bold px-4 py-2 rounded hover:scale-105 transition"
+              aria-label="Download KOW Whitepaper as PDF"
             >
               <FaDownload /> Download PDF
             </a>
           </div>
 
-          {/* Κείμενο / Items / Εικόνα */}
+          {}
           {activeSection && (
             <section className="relative p-10 z-10 pb-32">
-              <h1 className="text-3xl font-extrabold text-gold mb-6">
+              <h2 className="text-3xl font-extrabold text-gold mb-6">
                 {activeSection.title}
-              </h1>
+              </h2>
 
               {activeSection.items ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -299,9 +304,9 @@ export default function WhitepaperPage() {
                       key={idx}
                       className="bg-black/50 border border-gold/30 rounded-xl p-6"
                     >
-                      <h2 className="text-xl font-bold text-gold mb-4">
+                      <h3 className="text-xl font-bold text-gold mb-4">
                         {phase.phase}
-                      </h2>
+                      </h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2">
                         {phase.goals.map((g, i) => (
                           <li key={i}>{g}</li>
@@ -323,6 +328,8 @@ export default function WhitepaperPage() {
                   <img
                     src={activeSection.image}
                     alt={activeSection.title}
+                    loading="lazy"
+                    decoding="async"
                     className="rounded-xl border border-gold/30"
                   />
                 </div>
@@ -339,12 +346,14 @@ export default function WhitepaperPage() {
             </section>
           )}
 
-          {/* Navigation */}
+          {}
           <div className="flex justify-between items-center sticky bottom-4 px-6 z-20">
             {prevSection ? (
               <button
+                type="button"
                 onClick={() => setActive(prevSection.id)}
                 className="flex items-center gap-10 bg-black/60 border border-gold/40 text-gold font-bold py-3 px-6 rounded-xl w-auto"
+                aria-label={`Go to previous: ${prevSection.title}`}
               >
                 <FaArrowLeft /> Prev
               </button>
@@ -354,8 +363,10 @@ export default function WhitepaperPage() {
 
             {nextSection ? (
               <button
+                type="button"
                 onClick={() => setActive(nextSection.id)}
                 className="flex items-center gap-10 bg-black/60 border border-gold/40 text-gold font-bold py-3 px-6 rounded-xl w-auto"
+                aria-label={`Go to next: ${nextSection.title}`}
               >
                 Next <FaArrowRight />
               </button>
