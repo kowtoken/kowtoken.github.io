@@ -1,35 +1,78 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { scroller } from "react-scroll";
+import { AnimatePresence, motion } from "framer-motion"; // 👈 import
+
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 import About from "./components/About";
 import Info from "./components/Info";
-import Tokenomics from './components/Tokenomics'
-import Whitepaper from './components/Whitepaper'
-import Roadmap from './components/Roadmap'
-import Partners from './components/Partners'
-import SocialLinks from './components/SocialLinks'
-import Faq from './components/Faq'
-import Contact from './components/Contact'
-import BuyToken from './components/BuyToken'
-import Footer from './components/Footer'
+import Tokenomics from "./components/Tokenomics";
+import Whitepaper from "./components/Whitepaper";
+import Roadmap from "./components/Roadmap";
+import Partners from "./components/Partners";
+import SocialLinks from "./components/SocialLinks";
+import Faq from "./components/Faq";
+import Contact from "./components/Contact";
+import BuyToken from "./components/BuyToken";
+import Footer from "./components/Footer";
+
+import WhitepaperPage from "./pages/WhitepaperPage";
+
+function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const target = location.hash.replace("#", "");
+      scroller.scrollTo(target, {
+        duration: 500,
+        smooth: true,
+        offset: -80,
+      });
+    }
+  }, [location]);
+
+  return (
+    <main>
+      <Hero />
+      <About />
+      <Info />
+      <Partners />
+      <Tokenomics />
+      <Roadmap />
+      <Whitepaper />
+      <SocialLinks />
+      <Faq />
+      <Contact />
+      <BuyToken />
+    </main>
+  );
+}
 
 export default function App() {
+  const location = useLocation();
+
   return (
     <div className="bg-black text-white min-h-screen">
       <Header />
-      <main>
-        <Hero />           {/* Home */}
-        <About />          {/* About */}
-        <Info />           {/* Info */}
-        <Partners />       {/* Partners */}
-        <Tokenomics />     {/* Tokenomics */}
-        <Roadmap />        {/* Roadmap */}
-        <Whitepaper />     {/* Whitepaper */}
-        <SocialLinks />    {/* Social Media */}
-        <Faq />            {/* FAQ */}
-        <Contact />        {/* Contact Us */}
-        <BuyToken />       {/* Προαιρετικά στο τέλος */}
-        
-      </main>
+
+      {/* 👇 Animation wrapper */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/whitepaper" element={<WhitepaperPage />} />
+          </Routes>
+        </motion.div>
+      </AnimatePresence>
+
       <Footer />
     </div>
   );

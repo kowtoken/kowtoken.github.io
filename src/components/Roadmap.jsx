@@ -15,7 +15,7 @@ const roadmapItems = [
       "Initial DEX listing",
       "Achievement of the target of 2,918 holders",
       <span className="text-gold font-semibold">3% of all tokens will be burned and fees will be reduced to 8%.</span>,
-      "The 3% reflection fee (a tax intended for future burning🔥) will return to 0%."
+      "The 3% reflection fee (a tax intended for future burning🔥) will return to 0%.",
     ],
     completed: true,
   },
@@ -25,6 +25,7 @@ const roadmapItems = [
       "Achievement of the target of 2,918 holders",
       <span className="text-gold font-semibold">3% of all tokens will be burned and fees will be reduced to 8%.</span>,
       "The 3% reflection fee (a tax intended for future burning🔥) will return to 0%.",
+      <span className="text-gold font-semibold"> At 5,000 holders → fees drop from 8% to 6%.</span>,
       "Expansion of the KOW ecosystem with new utilities.",
     ],
     completed: false,
@@ -34,6 +35,7 @@ const roadmapItems = [
     description: [
       "Listings on major crypto information platforms",
       "Listings on centralized exchanges (CEX)",
+      <span className="text-gold font-semibold"> At 10,000 holders → further fee reduction planned.</span>,
       "Cross-chain integration"
     ],
     completed: false,
@@ -42,7 +44,8 @@ const roadmapItems = [
     title: "🌐🗺️ 2026",
     description: [
       "NFT collections inspired by KOW",
-      "DeFi collaborations"
+      "DeFi collaborations",
+      <span className="text-gold font-semibold">Establish KOW as a recognizable token currency in the global crypto market</span>,
     ],
     completed: false,
   },

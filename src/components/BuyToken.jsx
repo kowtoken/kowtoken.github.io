@@ -84,7 +84,9 @@ const BuyToken = () => {
             Choose your favorite platform to{" "}
             <span className="text-gold font-semibold">
               buy King Of World Token
+              
             </span>
+            <p>Connect your wallet and amount to swap.</p>
           </p>
         </div>
 
