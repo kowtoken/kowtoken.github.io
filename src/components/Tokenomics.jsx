@@ -51,7 +51,7 @@ const Tokenomics = () => {
                 <h3 className="text-lg font-semibold text-gold mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xl font-bold text-white">{item.value}</p>
+                <p className="text-xl font-bold text-gold">{item.value}</p>
               </article>
             ))}
           </div>

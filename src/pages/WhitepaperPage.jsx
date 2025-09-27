@@ -82,44 +82,46 @@ Looking forward, BSC’s interoperability paves the way for <span class="text-go
     image: blockchainImg,
   },
   {
-    id: "tokenomics",
-    title: "4. Tokenomics",
-    items: [
-      {
-        phase: "📦 Token Details",
-        goals: [
-          <>
-            📘 Token Name: <span className="text-gold font-bold">KingOfWorld</span>
-          </>,
-          <>
-            ⚜️ Symbol: <span className="text-gold font-bold">KOW</span>
-          </>,
-          "🔢 Decimals: 18",
-          "📊 Total Supply: 1,000,000,000,000 KOW (1 Trillion tokens)",
-          "🛠️ Blockchain: BNB Smart Chain (BEP-20)",
-        ],
-      },
-      {
-        phase: "💰 Transaction Fees (Current 11%)",
-        goals: [
-          "5% Marketing",
-          "3% Reflection (temporary, later reduced to 0%)",
-          "2% Liquidity",
-          "1% Burn",
-        ],
-      },
-      {
-        phase: "📉 Future Fee Reductions",
-        goals: [
-          "Target 2,918 holders → 3% burn + fees reduced to 8%",
-          "Reflection fee (3%) returns to 0%",
-          "At 5,000 holders → fees drop from 8% → 6%",
-          "At 10,000 holders → further fee reduction planned",
-          "👉 The more interest in KOW, the more the fees will fall",
-        ],
-      },
-    ],
-  },
+  id: "tokenomics",
+  title: "4. Tokenomics",
+  items: [
+    {
+      phase: "📦 Token Details",
+      goals: [
+        <span className="text-gold">📘 Token Name: KingOfWorld</span>,
+        <span className="text-gold">⚜️ Symbol: KOW</span>,
+        <span className="text-gold">🔢 Decimals: 18</span>,
+        <span className="text-gold">
+          📊 Total Supply: 1,000,000,000,000 KOW (1 Trillion tokens)
+        </span>,
+        <span className="text-gold">
+          🛠️ Blockchain: BNB Smart Chain (BEP-20)
+        </span>,
+      ],
+    },
+    {
+      phase: "💰 Transaction Fees (Current 11%)",
+      goals: [
+        "5% Marketing",
+        "3% Reflection (temporary, later reduced to 0%)",
+        "2% Liquidity",
+        "1% Burn",
+      ],
+    },
+    {
+      phase: "📉 Future Fee Reductions",
+      goals: [
+        "Target 2,918 holders → 3% burn + fees reduced to 8%",
+        "Reflection fee (3%) returns to 0%",
+        "At 5,000 holders → fees drop from 8% → 6%",
+        "At 10,000 holders → further fee reduction planned",
+        "👉 The more interest in KOW, the more the fees will fall",
+      ],
+    },
+  ],
+},
+
+
   {
     id: "liquidity",
     title: "5. Liquidity Strategy",
@@ -217,6 +219,14 @@ Nothing in this document should be interpreted as financial advice, investment g
 <span class="text-gold">Always do your own research (DYOR)</span> before making any financial commitments.
 `,
   },
+  {
+  id: "future",
+  title: "10. Coming Soon",
+  content: `🚀 These utilities are not active today, but they are part of the <span class="text-gold">long-term prophecy</span> of KOW.  
+Each one will be unveiled gradually, alongside community growth and the achievement of major milestones.
+`,
+},
+
 ];
 
 export default function WhitepaperPage() {
@@ -258,11 +268,10 @@ export default function WhitepaperPage() {
                   type="button"
                   onClick={() => setActive(s.id)}
                   aria-current={active === s.id ? "true" : undefined}
-                  className={`block w-full text-left px-3 py-2 rounded-l border-l-4 ${
-                    active === s.id
+                  className={`block w-full text-left px-3 py-2 rounded-l border-l-4 ${active === s.id
                       ? "bg-gold text-black font-bold border-yellow-400"
                       : "hover:bg-gold/20 border-transparent"
-                  }`}
+                    }`}
                 >
                   {s.title}
                 </button>

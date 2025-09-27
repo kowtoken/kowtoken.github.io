@@ -32,7 +32,7 @@ const Whitepaper = () => {
           Dive into our{" "}
           <span className="text-gold font-semibold">vision</span>,{" "}
           <span className="text-gold font-semibold">technology</span>, and{" "}
-          <span className="text-gold font-semibold">tokenomics</span> of KOW.
+          <span className="text-gold font-semibold">tokenomics</span> of <span className="text-gold font-semibold">KOW.</span>
         </p>
 
         {/* CTA Button */}

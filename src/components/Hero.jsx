@@ -23,18 +23,16 @@ const Hero = () => {
         {/* Title */}
         <h1
           id="hero-title"
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gold drop-shadow-lg"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gold drop-shadow-lg leading-tight text-center"
         >
-          King Of World Token
+          ✨King Of World Token (KOW)
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg sm:text-xl text-gray-300 max-w-xl leading-relaxed">
-          The future of meme coins is here. Powered by{" "}
-          <span className="text-gold font-semibold">community</span>, driven by{" "}
-          <span className="text-gold font-semibold">innovation</span>, and
-          designed to go{" "}
-          <span className="text-gold font-bold italic">to the moon 🚀</span>.
+          ✨The token designed to reward long-term belief. <br />
+          Is the <span className="text-gold font-semibold">gold</span> token built for everyone. <br />
+          <span className="text-gold font-semibold">“ Buy • Stake • Earn ”</span>
         </p>
 
         {/* CTA buttons */}

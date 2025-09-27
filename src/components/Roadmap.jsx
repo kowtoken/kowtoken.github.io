@@ -6,7 +6,7 @@ const roadmapItems = [
     title: "🌐🗺️ 2025",
     description: [
       <span key="1" className="text-gold font-semibold">Token creation</span>,
-      "Launch of community channels",
+      "Launch of community channels and social media",
       "Strengthening branding and global community growth.",
     ],
     completed: true,
@@ -36,7 +36,7 @@ const roadmapItems = [
   {
     title: "🌐🗺️ 2026",
     description: [
-      "Listings on major crypto platforms",
+      
       "Listings on centralized exchanges (CEX)",
       <span key="5" className="text-gold font-semibold">At 10,000 holders → further fee reduction planned.</span>,
       "Cross-chain integration",

@@ -44,7 +44,7 @@ const Info = () => {
 
         {/* Description */}
         <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-          Here’s how <span className="text-gold">$KOW</span> works, what it{" "}
+          Here’s how <span className="text-gold">KOW</span> works, what it{" "}
           <span className="text-gold">stands for</span>, and where it’s going 🚀
         </p>
 
@@ -69,14 +69,14 @@ const Info = () => {
             </p>
           </article>
 
-          {/* Vision */}
+          {/* Future Utilities (was Vision) */}
           <article
             role="group"
-            aria-label="Vision"
+            aria-label="Future Utilities"
             className="bg-white/5 border border-gold/30 rounded-2xl p-8 hover:scale-105 transition-transform"
           >
             <FaEye className="text-gold text-4xl mb-4" aria-hidden="true" />
-            <h3 className="text-xl font-bold text-gold mb-2">Vision</h3>
+            <h3 className="text-xl font-bold text-gold mb-2">Future Utilities</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               From meme token → to iconic scarce currency.  
               <span className="text-gold">KOW</span> expands into staking,

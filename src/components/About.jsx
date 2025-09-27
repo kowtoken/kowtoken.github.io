@@ -15,7 +15,7 @@ const About = () => {
           id="about-title"
           className="text-4xl sm:text-5xl font-extrabold text-gold"
         >
-          🧠 About $KOW
+          🧠 About KOW
         </h2>
 
         {/* Intro */}
