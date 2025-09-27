@@ -8,19 +8,19 @@ const Hero = () => {
       aria-labelledby="hero-title"
       className="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden bg-gradient-to-b from-black via-darkblue to-black"
     >
-      {}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/80 via-black/60 to-darkblue/80 z-0" />
 
-      {}
+      {/* Content */}
       <div className="relative z-10 max-w-3xl px-6 flex flex-col items-center space-y-8">
-        {}
+        {/* Logo */}
         <img
           src={logo}
           alt="King of World Token Logo"
           className="h-32 sm:h-48 md:h-56 mb-4 drop-shadow-xl"
         />
 
-        {}
+        {/* Title */}
         <h1
           id="hero-title"
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gold drop-shadow-lg"
@@ -28,7 +28,7 @@ const Hero = () => {
           King Of World Token
         </h1>
 
-        {}
+        {/* Subtitle */}
         <p className="text-lg sm:text-xl text-gray-300 max-w-xl leading-relaxed">
           The future of meme coins is here. Powered by{" "}
           <span className="text-gold font-semibold">community</span>, driven by{" "}
@@ -37,7 +37,7 @@ const Hero = () => {
           <span className="text-gold font-bold italic">to the moon 🚀</span>.
         </p>
 
-        {}
+        {/* CTA buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <ScrollLink
             to="buytoken"

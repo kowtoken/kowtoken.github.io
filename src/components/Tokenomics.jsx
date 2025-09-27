@@ -26,7 +26,7 @@ const Tokenomics = () => {
       aria-labelledby="tokenomics-title"
       className="relative min-h-screen flex flex-col justify-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white overflow-hidden"
     >
-      {}
+      {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/70 via-black/40 to-darkblue/70" />
 
       <div className="relative max-w-7xl mx-auto px-6 w-full">
@@ -37,9 +37,9 @@ const Tokenomics = () => {
           📊 Tokenomics
         </h2>
 
-        {}
+        {/* Grid με στοιχεία + εικόνα */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {}
+          {/* Left: Token Info */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {data.map((item, index) => (
               <article
@@ -56,7 +56,7 @@ const Tokenomics = () => {
             ))}
           </div>
 
-          {}
+          {/* Right: Static Image */}
           <div className="w-full flex justify-center">
             <img
               src={avaxLogo}
@@ -67,7 +67,7 @@ const Tokenomics = () => {
           </div>
         </div>
 
-        {}
+        {/* Contract Address κάτω */}
         <div className="mt-16 text-center">
           <h3 className="text-lg font-semibold text-gold mb-3">
             📜 Contract Address
@@ -85,7 +85,7 @@ const Tokenomics = () => {
             {copied ? "✅ Copied to clipboard!" : contractAddress}
           </p>
 
-          {}
+          {/* 🔗 Link στο BscScan */}
           <div className="mt-4">
             <a
               href={`https://bscscan.com/token/${contractAddress}`}

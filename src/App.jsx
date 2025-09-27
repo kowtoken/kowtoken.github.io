@@ -18,13 +18,16 @@ import BuyToken from "./components/BuyToken";
 import Footer from "./components/Footer";
 
 import WhitepaperPage from "./pages/WhitepaperPage";
+import ScrollToTop from "./components/ScrollToTop"; // 👈 πρόσθεσε το import
 
+// ✅ Home Page sections
 function Home() {
   const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
       const target = location.hash.replace("#", "");
+      // μικρή καθυστέρηση για να υπάρχει χρόνος το DOM να φορτωθεί
       setTimeout(() => {
         scroller.scrollTo(target, {
           duration: 500,
@@ -52,12 +55,16 @@ function Home() {
   );
 }
 
+// ✅ Main App
 export default function App() {
   const location = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+
+      {/* 👇 Global scroll reset */}
+      <ScrollToTop />
 
       <AnimatePresence mode="wait">
         <motion.div

@@ -8,19 +8,19 @@ const Info = () => {
       aria-labelledby="info-title"
       className="relative min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white overflow-hidden"
     >
-      {}
+      {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/70 via-black/50 to-darkblue/70" />
 
-      {}
+      {/* 🚀 Εικόνα αριστερά */}
       <img
         src={tothemoon}
         alt="KOW to the moon"
         className="absolute left-0 top-1/2 -translate-y-1/2 w-[350px] max-w-[40%] opacity-90 pointer-events-none"
       />
 
-      {}
+      {/* Περιεχόμενο */}
       <div className="relative max-w-5xl mx-auto text-center px-6 space-y-12">
-        {}
+        {/* Title */}
         <h2
           id="info-title"
           className="text-4xl sm:text-5xl font-extrabold text-gold"
@@ -28,7 +28,7 @@ const Info = () => {
           ℹ️ Info
         </h2>
 
-        {}
+        {/* Contract Address */}
         <div className="text-lg sm:text-xl text-gray-300 leading-relaxed">
           <p>
             Contract Address:{" "}
@@ -42,15 +42,15 @@ const Info = () => {
           </p>
         </div>
 
-        {}
+        {/* Description */}
         <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
           Here’s how <span className="text-gold">$KOW</span> works, what it{" "}
           <span className="text-gold">stands for</span>, and where it’s going 🚀
         </p>
 
-        {}
+        {/* Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {}
+          {/* How it Works */}
           <article
             role="group"
             aria-label="How it works"
@@ -69,7 +69,7 @@ const Info = () => {
             </p>
           </article>
 
-          {}
+          {/* Vision */}
           <article
             role="group"
             aria-label="Vision"
@@ -85,7 +85,7 @@ const Info = () => {
             </p>
           </article>
 
-          {}
+          {/* Plan Ahead */}
           <article
             role="group"
             aria-label="Plan Ahead"

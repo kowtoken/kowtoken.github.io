@@ -31,11 +31,11 @@ const Partners = () => {
       aria-labelledby="partners-title"
       className="min-h-screen flex items-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white relative overflow-hidden"
     >
-      {}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-gold/10 via-transparent to-gold/10" />
 
       <div className="relative max-w-7xl mx-auto text-center px-6">
-        {}
+        {/* Title */}
         <h2
           id="partners-title"
           className="text-4xl sm:text-5xl font-extrabold mb-6 text-gold"
@@ -43,13 +43,13 @@ const Partners = () => {
           🤝 Our Partners
         </h2>
 
-        {}
+        {/* Subtitle */}
         <p className="text-lg text-gray-300 mb-16 max-w-2xl mx-auto">
           Trusted platforms and explorers supporting the{" "}
           <span className="text-gold">KOW</span> ecosystem.
         </p>
 
-        {}
+        {/* Partners grid */}
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10">
           {partners.map((partner, index) => (
             <li key={index}>

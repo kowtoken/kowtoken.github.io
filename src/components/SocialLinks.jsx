@@ -4,7 +4,7 @@ const socials = [
   {
     name: "X",
     icon: "fa-brands fa-x-twitter",
-    url: "https://x.com/Kingofworl32190",
+    url: "https://x.com/kowtoken",
     color: "text-sky-400 hover:text-sky-300",
   },
   {

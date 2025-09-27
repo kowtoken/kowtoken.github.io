@@ -12,10 +12,10 @@ const Footer = () => {
       </h2>
 
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-        {}
+        {/* Social Icons */}
         <div className="flex gap-4 items-center text-xl">
           <a
-            href="https://x.com/Kingofworl32190"
+            href="https://x.com/kowtoken"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter)"
@@ -80,7 +80,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {}
+        {/* Logo */}
         <img
           src={logo}
           alt="King of World Logo"
@@ -89,7 +89,7 @@ const Footer = () => {
         />
       </div>
 
-      {}
+      {/* Copyright */}
       <div className="mt-6 text-center text-sm text-gray-400">
         &copy; {new Date().getFullYear()}{" "}
         <span className="text-gold font-semibold">King of World Token</span>. All

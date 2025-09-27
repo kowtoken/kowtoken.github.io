@@ -5,12 +5,12 @@ const About = () => {
       aria-labelledby="about-title"
       className="relative min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white overflow-hidden"
     >
-      {}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-gold/10 via-transparent to-gold/5" />
 
-      {}
+      {/* Content */}
       <div className="relative max-w-6xl mx-auto text-center px-6 space-y-12">
-        {}
+        {/* Title */}
         <h2
           id="about-title"
           className="text-4xl sm:text-5xl font-extrabold text-gold"
@@ -18,7 +18,7 @@ const About = () => {
           🧠 About $KOW
         </h2>
 
-        {}
+        {/* Intro */}
         <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
           <span className="text-gold font-semibold">King of World Token</span>{" "}
           is more than just a cryptocurrency. It’s{" "}
@@ -28,9 +28,9 @@ const About = () => {
           , powered by community, humor, and innovation.
         </p>
 
-        {}
+        {/* Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {}
+          {/* Mission */}
           <article
             role="group"
             aria-label="Mission"
@@ -46,7 +46,7 @@ const About = () => {
             </p>
           </article>
 
-          {}
+          {/* Vision */}
           <article
             role="group"
             aria-label="Vision"
@@ -61,7 +61,7 @@ const About = () => {
             </p>
           </article>
 
-          {}
+          {/* Community */}
           <article
             role="group"
             aria-label="Community"
@@ -77,7 +77,7 @@ const About = () => {
             </p>
           </article>
 
-          {}
+          {/* Future */}
           <article
             role="group"
             aria-label="Future"
@@ -93,7 +93,7 @@ const About = () => {
           </article>
         </div>
 
-        {}
+        {/* Outro */}
         <p className="text-2xl font-bold text-gold mt-12 italic">
           🚀 Join the movement. Be part of the Legend.  
           <br /> The King! 👑

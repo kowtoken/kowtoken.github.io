@@ -61,11 +61,11 @@ const BuyToken = () => {
       aria-labelledby="buytoken-title"
       className="min-h-screen flex items-center py-20 bg-gradient-to-b from-darkblue via-black to-darkblue text-white relative overflow-hidden"
     >
-      {}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/80 via-black/50 to-darkblue/80" />
 
       <div className="relative max-w-6xl mx-auto px-6 text-center space-y-12">
-        {}
+        {/* Title */}
         <div className="flex flex-col items-center space-y-4">
           <img
             src={kowLogo}
@@ -88,7 +88,7 @@ const BuyToken = () => {
           </p>
         </div>
 
-        {}
+        {/* Buy Links */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-6">
           {buyLinks.map((link, idx) => (
             <a
@@ -110,7 +110,7 @@ const BuyToken = () => {
           ))}
         </div>
 
-        {}
+        {/* Fees Info */}
         <div className="mt-10 bg-white/10 backdrop-blur-md border border-gold/30 rounded-xl p-6 max-w-xl mx-auto">
           <h3 className="text-2xl font-bold text-gold mb-3">ℹ️ Trading Fees</h3>
           <p className="text-gray-300 text-lg">

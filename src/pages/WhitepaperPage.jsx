@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaDownload } from "react-icons/fa";
 import logoBg from "../assets/LOGO.png";
 import pdfFile from "../assets/KingOfWorld_Whitepaper.pdf";
@@ -7,7 +7,6 @@ import liquidityImg from "../assets/liquidity01.png";
 import blockchainImg from "../assets/blockchain-tech.png";
 import communityImg from "../assets/team.png";
 import governanceImg from "../assets/governance.png";
-
 
 const HIGHLIGHT_TERMS = [
   "KOW",
@@ -54,7 +53,6 @@ The <span class="text-gold">KOW community</span> is not just an audience but the
 If the community continues to grow and engage, KOW has the potential to establish itself as a <span class="text-gold">distinctive and recognizable presence</span> in the global cryptocurrency landscape.
 `,
   },
-
   {
     id: "info",
     title: "2. Info",
@@ -69,7 +67,6 @@ For example, <span class="text-gold">1% of every transaction</span> is automatic
 KOW is not just about the present moment. It is structured with a <span class="text-gold">long-term vision</span>, combining meme culture with sustainable tokenomics. The project’s growth strategy is designed to be gradual and organic, positioning KOW as a <span class="text-gold">recognizable and resilient digital asset</span> for the future.
 `,
   },
-
   {
     id: "blockchain",
     title: "3. Blockchain & Technology",
@@ -84,7 +81,6 @@ Looking forward, BSC’s interoperability paves the way for <span class="text-go
 `,
     image: blockchainImg,
   },
-
   {
     id: "tokenomics",
     title: "4. Tokenomics",
@@ -124,7 +120,6 @@ Looking forward, BSC’s interoperability paves the way for <span class="text-go
       },
     ],
   },
-
   {
     id: "liquidity",
     title: "5. Liquidity Strategy",
@@ -135,7 +130,6 @@ By allowing liquidity to grow alongside adoption, the project strengthens stabil
 `,
     image: liquidityImg,
   },
-
   {
     id: "roadmap",
     title: "6. Roadmap",
@@ -184,7 +178,6 @@ By allowing liquidity to grow alongside adoption, the project strengthens stabil
       },
     ],
   },
-
   {
     id: "community",
     title: "7. Community",
@@ -199,7 +192,6 @@ KOW thrives on <span class="text-gold">collective action</span>. When people uni
 `,
     image: communityImg,
   },
-
   {
     id: "governance",
     title: "8. Governance",
@@ -212,7 +204,6 @@ All adjustments and actions are fully visible <span class="text-gold">on-chain</
 `,
     image: governanceImg,
   },
-
   {
     id: "legal",
     title: "9. Legal Disclaimer",
@@ -231,6 +222,19 @@ Nothing in this document should be interpreted as financial advice, investment g
 export default function WhitepaperPage() {
   const [active, setActive] = useState("about");
 
+  // ✅ Scroll στην κορυφή με “επιμονή” για refresh
+  useEffect(() => {
+    const toTop = () => window.scrollTo({ top: 0, behavior: "auto" });
+    toTop();                                // άμεσα
+    const id = requestAnimationFrame(toTop); // και στο επόμενο frame
+    window.addEventListener("load", toTop);  // και μετά το load (σε κάποια browsers)
+
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("load", toTop);
+    };
+  }, []);
+
   const activeIndex = sections.findIndex((s) => s.id === active);
   const activeSection = sections[activeIndex];
   const prevSection = activeIndex > 0 ? sections[activeIndex - 1] : null;
@@ -240,7 +244,7 @@ export default function WhitepaperPage() {
   return (
     <div className="min-h-screen bg-[#0b0f1a] text-white">
       <div className="flex">
-        {}
+        {/* Sidebar */}
         <aside
           className="w-64 bg-black/90 border-r border-gold/30 p-6 sticky top-0 h-screen overflow-y-auto"
           role="navigation"
@@ -267,9 +271,9 @@ export default function WhitepaperPage() {
           </ul>
         </aside>
 
-        {}
+        {/* Content */}
         <main className="flex-1 relative" aria-live="polite">
-          {}
+          {/* 👑 Logo background */}
           <img
             src={logoBg}
             alt=""
@@ -277,7 +281,7 @@ export default function WhitepaperPage() {
             className="absolute inset-0 w-[500px] h-[500px] opacity-20 m-auto pointer-events-none select-none"
           />
 
-          {}
+          {/* Header */}
           <div className="relative p-6 border-b border-gold/20 z-10 flex justify-between items-center bg-black/50">
             <h1 className="text-xl font-bold text-gold">📑 KOW Whitepaper</h1>
             <a
@@ -290,7 +294,7 @@ export default function WhitepaperPage() {
             </a>
           </div>
 
-          {}
+          {/* Body */}
           {activeSection && (
             <section className="relative p-10 z-10 pb-32">
               <h2 className="text-3xl font-extrabold text-gold mb-6">
@@ -346,7 +350,7 @@ export default function WhitepaperPage() {
             </section>
           )}
 
-          {}
+          {/* Pager */}
           <div className="flex justify-between items-center sticky bottom-4 px-6 z-20">
             {prevSection ? (
               <button

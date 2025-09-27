@@ -1,4 +1,7 @@
+/* ❌ Δεν περιορίζουμε το #root με fixed width εδώ.
+   Το layout γίνεται μέσω Tailwind classes στα components. */
 
+/* Μικρά global tweaks αν χρειαστούν */
 img {
   display: block;
   max-width: 100%;

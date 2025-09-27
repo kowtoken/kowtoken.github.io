@@ -4,16 +4,17 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 
-const rootElement = document.getElementById("root");
-
-if (rootElement) {
-  createRoot(rootElement).render(
-    <StrictMode>
-      <BrowserRouter basename="/kowtoken/">
-        <App />
-      </BrowserRouter>
-    </StrictMode>
-  );
-} else {
-  console.error("❌ Root element not found! Check index.html");
+// 🔧 Απενεργοποιούμε το browser scroll restoration (fix για refresh)
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
 }
+
+const root = document.getElementById("root");
+
+createRoot(root).render(
+  <StrictMode>
+    <BrowserRouter basename="/">
+      <App />
+    </BrowserRouter>
+  </StrictMode>
+);

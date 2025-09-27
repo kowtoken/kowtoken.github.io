@@ -13,12 +13,12 @@ const Whitepaper = () => {
       aria-labelledby="whitepaper-title"
       className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0b0f1a] via-black to-[#0b0f1a] text-white relative pt-24"
     >
-      {}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-tr from-darkblue/60 via-black/40 to-darkblue/60" />
 
-      {}
+      {/* Content */}
       <div className="relative z-10 w-full px-6 text-center">
-        {}
+        {/* Title */}
         <h2
           id="whitepaper-title"
           className="flex items-center justify-center gap-3 text-4xl sm:text-5xl font-extrabold mb-6 text-gold"
@@ -27,7 +27,7 @@ const Whitepaper = () => {
           Whitepaper
         </h2>
 
-        {}
+        {/* Subtitle */}
         <p className="text-lg sm:text-xl mb-8 text-gray-300 leading-relaxed max-w-2xl mx-auto">
           Dive into our{" "}
           <span className="text-gold font-semibold">vision</span>,{" "}
@@ -35,7 +35,7 @@ const Whitepaper = () => {
           <span className="text-gold font-semibold">tokenomics</span> of KOW.
         </p>
 
-        {}
+        {/* CTA Button */}
         <Link
           to="/whitepaper"
           aria-label="View or download the Whitepaper"
